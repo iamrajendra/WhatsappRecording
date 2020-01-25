@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/audio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:src="@drawable/ic_mic"
+        android:tint="@android:color/white"
+        app:fabSize="normal" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:src="@drawable/ic_stop"
+        android:tint="@android:color/white"
+        android:visibility="gone"
+        app:fabSize="normal" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_above="@+id/audio_button"
+        android:layout_alignParentRight="true"
+        android:id="@+id/layoutLock"
+        style="@style/CardViewTheme"
+        android:layout_width="56dp"
+        android:layout_height="180dp"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#FFFFFF"
+        android:translationZ="1dp"
+        android:visibility="gone"
+        app:cardCornerRadius="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewLock"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="18dp"
+                android:src="@drawable/lock_ic"
+                android:tint="#AD9494" />
+
+            <ImageView
+                android:id="@+id/imageViewLockArrow"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="-8dp"
+                android:src="@drawable/arrow"
+                android:tint="@color/arrow_tint_color" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:layout_toLeftOf="@+id/audio_button"
+        android:id="@+id/layoutSlideCancel"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+
+        android:visibility="gone"
+        app:shimmer_animation_duration="2000">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <!--<editor-fold desc="Description">-->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:rotation="-90"
+                android:src="@drawable/ic_arrow"
+                android:tint="@color/arrow_tint_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/slide_to_cancel"
+                android:textColor="@color/shimmer_background_color"
+                android:textSize="16sp"
+
+                android:textStyle="normal" />
+            <!--</editor-fold>-->
+        </LinearLayout>
+
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutDustin"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/dustin_cover"
+            android:layout_width="32dp"
+            android:layout_height="4dp"
+            android:src="@drawable/dustbin_cover_ic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/dustin"
+            android:layout_width="16dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/dustbin_wheel_ic"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewMic"
+        android:layout_width="28dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="bottom"
+        android:src="@drawable/mic_ic"
+        android:tint="@android:color/holo_red_light"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:gravity="center"
+
+        android:layout_alignParentBottom="true"
+        android:text="0:00"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
