@@ -12,7 +12,7 @@ the code for recording audio and saving yourself. This sample will only
 give you the views and animations, perhaps the difficult part.
 GOODLUCK!!!
 
-First need to add AudioRecordView in xml resource layout file.
+First need to add AudioRecordingButton in xml resource layout file.
 
 ```
 <com.iamrajendra.recordingbutton.customui.AudioRecordingButton
